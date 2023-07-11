@@ -13,7 +13,12 @@ while menu != 4:
 
     if menu == 1:
         print("Grabar")
-        nif = fn.nifPersona()
+        while True:
+            nif = fn.crearNif()
+            if nif not in personas:
+                print("El NIF nuevo es: ",nif)
+                break
+
         nombre = fn.nombrePersona()
         edad = fn.edadPersona()
         fecNac = input("Ingrese su fecha de nacimiento: ")

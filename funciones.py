@@ -1,3 +1,5 @@
+#import random as rd
+
 def nifPersona():
     while True:
         nif = input("Ingrese su NIF: ").upper()
@@ -33,3 +35,16 @@ def edadPersona():
             print("Edad registrada correctamente")
             break
     return edad
+
+def crearNif():
+    import random as rd
+
+    num = "0123456789"
+    alfanum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    guion = "-"
+    nif = rd.sample(num,8) + rd.sample(guion,1) + rd.sample(alfanum,3)
+    nifFinal = "".join(nif)
+    return nifFinal
+
+        
+        
